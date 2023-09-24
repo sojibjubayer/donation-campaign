@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "picture": "https://ibb.co/WnRGzM2",
+        "picture": "https://i.ibb.co/yp2DtKN/Rectangle-4284.png",
         "title": "Clean water for children",
         "category": "Health",
         "category_bg": "#FF5733",
@@ -12,7 +12,7 @@
     },
     {
         "id": 2,
-        "picture": "https://ibb.co/Hdz6JpF",
+        "picture": "https://i.ibb.co/Kwqd1z0/Education.png",
         "title": "Good education",
         "category": "Education",
         "category_bg": "#FF444A",
@@ -23,7 +23,7 @@
     },
     {
         "id": 3,
-        "picture": "https://ibb.co/fdJcMZV",
+        "picture": "https://i.ibb.co/8gkhMGn/Clothing.png",
         "title": "Used Clothing Drive",
         "category": "Clothing",
         "category_bg": "#79C23F",
@@ -34,7 +34,7 @@
     },
     {
         "id": 4,
-        "picture": "https://ibb.co/zNKGszt",
+        "picture": "https://i.ibb.co/PtBwxdV/Food.png",
         "title": "Better Food for Everyone",
         "category": "Food",
         "category_bg": "#F87147",
@@ -67,7 +67,7 @@
     },
     {
         "id": 7,
-        "picture": "https://ibb.co/Hdz6JpF",
+        "picture": "https://i.ibb.co/Kwqd1z0/Education.png",
         "title": "Good education",
         "category": "Education",
         "category_bg": "#FF444A",
@@ -78,29 +78,29 @@
     },
     {
         "id": 8,
-        "picture": "https://ibb.co/WnRGzM2",
-        "title": "Clean water for children",
+        "picture": "https://i.ibb.co/yp2DtKN/Rectangle-4284.png",
+        "title": "Safe food for all",
         "category": "Health",
         "category_bg": "#FF5733",
         "card_bg": "#0052FF26",
         "text_button_bg": "#0052FF",
-        "description": "Health is a state of physical, mental, and social well-being where individuals are free from illness and injury. It encompasses regular exercise, a balanced diet, adequate sleep, and emotional stability. Maintaining good health is essential for a fulfilling life, as it enables us to pursue our goals, engage in daily activities, and enjoy meaningful relationships. Regular health check-ups and preventive measures, such as vaccinations and stress management, play a pivotal role in preserving well-being. Prioritizing health ensures longevity and a higher quality of life, promoting overall happiness and productivity.",
+        "description": "Safe Food for All is a global initiative committed to ensuring that every person, regardless of their location or socioeconomic status, has access to food that is free from contamination and harmful additives. By promoting food safety standards, educating communities about proper food handling, and advocating for transparent food labeling, this movement seeks to protect individuals from foodborne illnesses and ensure their well-being. Safe Food for All aims to create a world where everyone can enjoy nutritious meals without compromising their health.",
         "price": "$290.00"
     },
     {
         "id": 9,
-        "picture": "https://ibb.co/WnRGzM2",
-        "title": "Clean water for children",
+        "picture": "https://i.ibb.co/yp2DtKN/Rectangle-4284.png",
+        "title": "Donate Today, Transform Lives Tomorrow.",
         "category": "Health",
         "category_bg": "#FF5733",
         "card_bg": "#0052FF26",
         "text_button_bg": "#0052FF",
-        "description": "Health is a state of physical, mental, and social well-being where individuals are free from illness and injury. It encompasses regular exercise, a balanced diet, adequate sleep, and emotional stability. Maintaining good health is essential for a fulfilling life, as it enables us to pursue our goals, engage in daily activities, and enjoy meaningful relationships. Regular health check-ups and preventive measures, such as vaccinations and stress management, play a pivotal role in preserving well-being. Prioritizing health ensures longevity and a higher quality of life, promoting overall happiness and productivity.",
+        "description": "By donating today, you can be a catalyst for positive change and impact countless lives tomorrow. Your generosity empowers us to provide vital support, from healthcare and education to basic necessities, creating a brighter and healthier future for those in need. Together, we can make a lasting difference and ensure that every individual has the opportunity to thrive, regardless of their circumstances. Join us in building a more equitable and healthier world through your invaluable contributions.",
         "price": "$290.00"
     },
     {
         "id": 10,
-        "picture": "https://ibb.co/Hdz6JpF",
+        "picture": "https://i.ibb.co/Kwqd1z0/Education.png",
         "title": "Good education",
         "category": "Education",
         "category_bg": "#FF444A",
