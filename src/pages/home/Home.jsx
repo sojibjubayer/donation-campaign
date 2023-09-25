@@ -1,13 +1,16 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../../component/header/banner/Banner";
+import Donations from "../../component/header/Donations/Donations";
 
 
 const Home = () => {
-    const multiDonation=useLoaderData();
-    console.log(multiDonation);
+    const donations=useLoaderData();
+    
     return (
         <div>
             <Banner></Banner>
+            <Donations donations={donations}></Donations>
+           
             
         </div>
     );
