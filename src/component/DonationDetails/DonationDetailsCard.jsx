@@ -1,9 +1,37 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert'
 
 const DonationDetailsCard = ({ donation }) => {
-  console.log(donation);
   const { id, picture, title, category, category_bg, card_bg, text_button_bg, description, price } = donation || {};
+
+  const handleAddToDonation = () => {
+
+    const donationArray = [];
+    const getDonation = JSON.parse(localStorage.getItem('donation'))
+    if (!getDonation) {
+        donationArray.push(donation)
+        localStorage.setItem('donation', JSON.stringify(donationArray))
+        swal("Good job!", "Successfully Added", "success");
+    }
+    else{
+        const isExist=getDonation.find(item=>item.id==id)
+        // console.log(isExist);
+        if(!isExist){
+            donationArray.push(...getDonation,donation)
+            localStorage.setItem('donation', JSON.stringify(donationArray))
+            swal("Good job!", "Successfully Added", "success");
+
+        }
+        else{
+            swal("Ooops!", "Already Exist", "error");
+
+        }
+     
+
+    }
+}
+
   return (
     <div>
       
@@ -16,7 +44,7 @@ const DonationDetailsCard = ({ donation }) => {
         </div>
         <div className='bg-black bg-opacity-40 p-8 -mt-[120px] relative'> 
         <Link to={`/donations/${id}`}>
-            <button className={`bg-[${category_bg}] text-white px-6 py-4 rounded font-semibold`}>Donate $290</button>
+            <button onClick={handleAddToDonation} className={`bg-[${category_bg}] text-white px-6 py-4 rounded font-semibold`}>Donate $290</button>
             </Link>
         </div>
         <div className="">
