@@ -1,25 +1,27 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import DonationsCard from "../../component/header/Donations/DonationsCard";
+import DonationDetailsCard from "./DonationDetailsCard";
+
 
 
 const DonationDetails = () => {
     const params = useParams();
+    console.log(params.id);
 
     const donations = useLoaderData();
 
     const [donation, setDonation] = useState();
     useEffect(()=>{
-        const searchDonation=donations.find(donation=>donation.id===params.id)
-        
+        const searchDonation=donations.find(donation=>donation.id==params.id)
+        console.log(searchDonation);
         if(searchDonation){
-            setDonation(donation)
+            setDonation(searchDonation)
         }
-    },[])
+    },[donations,params.id])
     
     return (
         <div>
-           <DonationsCard donation={donation}></DonationsCard>
+           <DonationDetailsCard donation={donation}></DonationDetailsCard>
         </div>
     );
 };
