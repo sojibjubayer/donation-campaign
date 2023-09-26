@@ -1,44 +1,40 @@
 
+import { PieChart, Pie, Cell, Legend } from 'recharts';
 
-import { useEffect, useState } from "react";
+const data = [
+  { name: 'Your Donation', value: 30 },
+  { name: 'Total Donation', value: 60 },
+];
 
-
-
+const COLORS = ['#00C49F', '#FF444A'];
 
 const Statistics = () => {
-    const [donations, setDonations] = useState([])
-    const [nofound, setNofound] = useState('')
- 
-    
-
-
-    useEffect(() => {
-        const getDonation = JSON.parse(localStorage.getItem('donation'))
-        
-        if (getDonation) {
-           
-            setDonations(getDonation)
-            // const total=getItem.reduce((preValue,currentItem)=>preValue+currentItem.price,0)
-            // // console.log(total);
-            // setTotal(total)
-
-        }
-        else {
-            setNofound('No Data Found')
-        }
-    }, [])
-    
-
-    console.log(donations);
-
-
-    return (
-        <div>
-          
-            
-
-        </div>
-    );
+  return (
+    <div>
+      <PieChart className='mx-auto' width={600} height={600}>
+        <Pie
+          dataKey="value"
+          data={data}
+          cx={200}
+          cy={200}
+          innerRadius={0}
+          outerRadius={200}
+          fill="#8884d8"
+        >
+          {data.map((entry, index) => (
+            <Cell key={`center-cell-${index}`} fill={COLORS[index]} />
+          ))}
+        </Pie>
+        <Legend />
+      </PieChart>
+      <text x={200} y={200} textAnchor="middle" dominantBaseline="middle" fill="white" fontSize={18}>
+        60%
+      </text>
+      <text x={200} y={250} textAnchor="middle" dominantBaseline="middle" fill="white" fontSize={18}>
+        30%
+      </text>
+    </div>
+  );
 };
 
 export default Statistics;
