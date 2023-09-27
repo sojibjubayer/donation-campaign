@@ -3,10 +3,13 @@ import Logo from "./Logo";
 
 
 const Navbar = () => {
+    const fontStyle={
+        fontFamily:'Inter'
+    }
     return (
-        <div className="flex  justify-between items-center py-6 px-5 shadow-md">
+        <div style={fontStyle} className="flex flex-col md:flex-row  justify-between items-center py-6 px-5 shadow-md">
             <Logo></Logo>
-            <ul className=" flex gap-20">
+            <ul className=" flex gap-5 md:gap-20 mt-5 md:mt-0">
                 <li>
                     <NavLink
                         to="/"

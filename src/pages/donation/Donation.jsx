@@ -37,7 +37,7 @@ const Donation = () => {
                 {nofound ? <p className="h-[70vh] flex justify-center items-center" >No data Found</p> :
                     <div>
                      
-                        <div className="grid grid-cols-2 gap-5 ">
+                        <div className="grid md:grid-cols-2 gap-5 ">
                             {
                                 isShow? donations.map(donation => 
                                 <DonationCard key={donation.id} donation={donation}></DonationCard>)

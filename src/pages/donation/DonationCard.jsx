@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 
 
 const DonationCard = ({donation}) => {
+
+  const fontStyle={
+    fontFamily:'Inter'
+}
     // console.log(donation);
     const { id, picture, title, category, category_bg, card_bg, text_button_bg, description, price } = donation || {};
 
@@ -14,14 +18,14 @@ const DonationCard = ({donation}) => {
     
 
     return (
-      <div>
+      <div style={fontStyle}>
       
-      <div style={myStyle} className={`relative flex w-[600px] gap-5 gap-y-6 rounded
-      bg-clip-border text-gray-700 shadow-md`}>
+      <div style={myStyle} className={`relative flex flex-col lg:flex-row w-[100%] mx-auto gap-5 gap-y-6 rounded
+      bg-clip-border text-gray-700 shadow-md `}>
         <div className="relative  overflow-hidden rounded-t-xl bg-white bg-clip-border ">
           <img
             src={picture}
-            className="h-[200px] w-[220px] object-cover"/>
+            className="h-[200px] lg:h-[200px] w-full lg:w-[220px] object-cover"/>
         </div>
         <div className="p-6">
         <p style={myStyle} className={`block py-1 px-2 w-fit rounded-md font-sans  text-base font-medium leading-relaxed  antialiased mb-2`}>

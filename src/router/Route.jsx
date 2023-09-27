@@ -4,13 +4,14 @@ import Home from "../pages/home/Home";
 import Donation from "../pages/donation/Donation";
 import Statistics from "../pages/statistics/Statistics";
 import DonationDetails from "../component/DonationDetails/DonationDetails";
+import NotFound from "../layout/NotFound";
 
 
 const myCreatedRoute = createBrowserRouter([
     {
         path:'/',
         element:<MainLayout></MainLayout>,
-        errorElement:<div>error page</div>,
+        errorElement:<NotFound></NotFound>,
         children:[
             {
                 path:'/',
