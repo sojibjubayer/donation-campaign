@@ -1,14 +1,38 @@
 
+import { useEffect, useState } from 'react';
 import { PieChart, Pie, Cell, Legend } from 'recharts';
 
-const data = [
-  { name: 'Your Donation', value: 30 },
-  { name: 'Total Donation', value: 60 },
-];
 
-const COLORS = ['#00C49F', '#FF444A'];
 
 const Statistics = () => {
+  
+  
+  const COLORS = ['#00C49F', '#FF444A'];
+  const [donations, setDonations] = useState([])
+  const [nofound, setNofound] = useState('')
+
+  
+
+
+  useEffect(() => {
+      const getDonation = JSON.parse(localStorage.getItem('donation'))
+      
+      if (getDonation) {
+         
+          setDonations(getDonation.length)
+         
+
+      }
+      else {
+          setNofound('No Data Found')
+      }
+  }, [])
+  const data = [
+    { name: 'Your Donation', value: donations },
+    { name: 'Total Donation', value: 12 },
+  ];
+  
+
   return (
     <div>
       <PieChart className='mx-auto' width={600} height={600}>
@@ -27,12 +51,7 @@ const Statistics = () => {
         </Pie>
         <Legend />
       </PieChart>
-      <text x={200} y={200} textAnchor="middle" dominantBaseline="middle" fill="white" fontSize={18}>
-        60%
-      </text>
-      <text x={200} y={250} textAnchor="middle" dominantBaseline="middle" fill="white" fontSize={18}>
-        30%
-      </text>
+     
     </div>
   );
 };
